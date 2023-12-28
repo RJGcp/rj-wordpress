@@ -19,6 +19,8 @@ steps:
   id: 'rj-apply'
   entrypoint: 'sh'
   args: ['-c', 'terraform apply -auto-approve -var="project_id=${_PROJECT_ID}" -var="region=${_REGION}" -var="zone=${_ZONE}" -var="db_password=$$DB_PASSWORD"']
+  secretEnv: ['DB_PASSWORD']
+
 availableSecrets:
   secretManager:
   - versionName: projects/682035886856/secrets/rj/versions/1
