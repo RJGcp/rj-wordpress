@@ -5,7 +5,7 @@ resource "google_compute_instance" "wordpress" {
 
   boot_disk {
     initialize_params {
-      image = "family/debian-9"
+      image = "debian-cloud/debian-11"
     }
   }
 
